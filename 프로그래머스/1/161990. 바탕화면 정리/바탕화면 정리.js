@@ -1,22 +1,21 @@
 function solution(wallpaper) {
     const answer = [];
-    const rdy = [];
-    const rdx = [];
+    const yAxis = [];
+    const xAxis = [];
     
     for(let i = 0; i< wallpaper.length; i++){
         for(let j = 0; j < wallpaper[i].length; j++){
-            //rdx rdy
             if(wallpaper[i][j] === '#'){
-                rdx.push(j);
-                rdy.push(i);
+                yAxis.push(i);
+                xAxis.push(j);
             }
         }
     }
     
-    answer.push(Math.min(...rdy));
-    answer.push(Math.min(...rdx));
-    answer.push(Math.max(...rdy) +1);
-    answer.push(Math.max(...rdx) +1);
+    answer.push(Math.min(...yAxis));
+    answer.push(Math.min(...xAxis));
+    answer.push(Math.max(...yAxis) +1);
+    answer.push(Math.max(...xAxis) +1);
     
     return answer;
 }
