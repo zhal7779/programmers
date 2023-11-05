@@ -2,6 +2,10 @@ function solution(want, number, discount) {
     let count = 0;
     const shoppingList = {};
     
+    let min_num = 0;
+    let max_num = 9;
+    
+    
     function checkAllZeros(arr) {
       for (let i = 0; i < arr.length; i++) {
         if (arr[i] !== 0) {
@@ -11,9 +15,7 @@ function solution(want, number, discount) {
       return count++;
     }
 
-    let min_num = 0;
-    let max_num = 9;
-    
+ 
     while(min_num <= discount.length){
         want.forEach((key, index)=>{
             shoppingList[key] = number[index];
