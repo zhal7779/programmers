@@ -1,8 +1,5 @@
 function solution(s) {
-    var answer = '';
-    const numArr = s.split(" ");
-    answer += Math.min(...numArr) + " ";
-    answer += Math.max(...numArr);
-    
-    return answer;
+    const sortArr = s.split(' ').sort((a,b) => a-b);
+ 
+    return `${sortArr[0]} ${sortArr[sortArr.length-1]}`;
 }
